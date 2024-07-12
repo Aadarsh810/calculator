@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CALCULAOR</title>
+</head>
+      <style>
+        .large-button{
+            padding: 5px 50px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 2px solid black;
+            background-color: pink;
+        }
+        .align
+        {
+            text-align: center;
+            border: 20px solid black;
+            padding: 20px;
+            margin: 20px;
+        }
+      </style>
+<body>
+	<H1 style="color:teal; text-align: center; font-size: 25x;">CALCULATOR</h1>
+    <hr>
+    <p style="color: green; font-size: 20px;">this is a online calculatig app!</p>
+    Do you want to surf youtube:-
+    <a href=https://www.youtube.com>youtube</a>
+    <br>
+    <img src="forest.jpg" alt="forest" align="right" style="width: 300px;height:300px;">
+    <div  style="background-color:aquamarine" class="align">
+        <input type="text" id="display">
+        <br>
+        <input type="button" value="7" onclick="addToDisplay('7')">
+        <input type="button" value="8" onclick="addToDisplay('8')">
+        <input type="button" value="9" onclick="addToDisplay('9')">
+        <input type="button" value="/" onclick="addToDisplay('/')">
+        <br>
+        <input type="button" value="4" onclick="addToDisplay('4')">
+        <input type="button" value="5" onclick="addToDisplay('5')">
+        <input type="button" value="6" onclick="addToDisplay('6')">
+        <input type="button" value="*" onclick="addToDisplay('*')"> 
+        <br>
+        <input type="button" value="1" onclick="addToDisplay('1')">
+        <input type="button" value="2" onclick="addToDisplay('2')">
+        <input type="button" value="3" onclick="addToDisplay('3')">
+        <input type="button" value="+" onclick="addToDisplay('+')">
+        <br>
+        <input type="button" value="0" onclick="addToDisplay('0')">
+        <input type="button" value="." onclick="addToDisplay('.')">
+        <input type="button" value="=" onclick="calculate('=')">
+        <input type="button" value="-" onclick="addToDisplay('-')">
+        <br>
+        <input type="button" value="C" onclick="clearDisplay()" class="large-button">
+    </div>
+    <script type="text/javascript">
+        function addToDisplay(value)
+        {
+            document.getElementById('display').value += value;
+        }
+        function clearDisplay()
+        {
+            document.getElementById('display').value=' ';
+        }
+        function calculate(value)
+        {
+            var display=document.getElementById('display');
+                try 
+                {
+                display.value = eval(display.value); // Use eval to calculate the value in the display
+                } catch (e) 
+                {
+                display.value = 'Error';
+                }
+        }
+    </script>
+    <footer style="background-color: aquamarine; text-align: center;">
+        <p>&copy; 2024 simple-calculator. All rights reserved.</p>
+        <p>Contact: aadarshdas01@gmail.com | Phone:9807854241</p>
+    </footer>
+</body>
+</html>
